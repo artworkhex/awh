@@ -1,0 +1,32 @@
+
+
+img {
+  width: 100%;
+  z-index: 1;
+}
+.tombol:hover {
+  color: #afafaf;
+  color: -moz-linear-gradient(45deg, #afafaf 0%, #cbcbcb 1%, #ffffff 100%);
+  color: -webkit-linear-gradient(45deg, #afafaf 0%, #cbcbcb 1%, #ffffff 100%);
+  color: linear-gradient(45deg, #afafaf 0%, #cbcbcb 1%, #ffffff 100%);
+}
+.tombol {
+  align-items: center;
+  width: 70%;
+  background: #6f6f6f;
+  color: white;
+  text-align: center;
+  height: 7vmax;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  font-size: 3vw;
+  display: grid;
+  align-items: center;
+}
+.foto {
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
+}

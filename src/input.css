@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* GLOBAL */
+
+@keyframes judul {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* INTRODUCING */
+.leader {
+  background-image: url(../bahan/leader.png);
+}
+.officer {
+  background-image: url(../bahan/officer.png);
+}
+.satu{
+background-image: url(../bahan/produk/1.jpg);
+}
+.dua{
+background-image: url(../bahan/produk/2.jpg);
+}
+.tiga{
+background-image: url(../bahan/produk/3.png);
+}
+.empat{
+background-image: url(../bahan/produk/4.jpg);
+}
+.lima{
+background-image: url(../bahan/produk/5.jpg);
+}
+
+
+
+@keyframes judul2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes judul1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* BACKGROUND */
+.bg-lg1 {
+  top: 0;
+  z-index: -99;
+  opacity: 10%;
+  position: absolute;
+  background-image: url(../bahan/kiri.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1200px;
+  height: 1200px;
+}
+.bg-lg2 {
+  opacity: 10%;
+  position: absolute;
+  background-image: url(../bahan/kanan.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  right: 0;
+  width: 1200px;
+  height: 1200px;
+}
+
+header {
+  background-image: url(../bahan/bg.png);
+}
+
+/* KOTAK
+.kotak {
+  background-color: rgb(58, 58, 58);
+}
+.kotak1 {
+  height: 250px;
+  background-image: url(../bahan/produk/1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.kotak2 {
+  height: 250px;
+  background-image: url(../bahan/produk/2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.kotak3 {
+  height: 250px;
+  background-image: url(../bahan/produk/4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.kotak4 {
+  margin-bottom: 200px;
+  background-image: url(../bahan/produk/3.png);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+.kotak5 {
+  margin-bottom: 200px;
+  background-image: url(../bahan/produk/5.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+} */
+
+/* LIVE SUBSCRIBE */
+.live-yt {
+  background-image: url(../bahan/vector.png);
+}
+@media screen and (max-width: 750px) {
+  .bg-lg1 {
+    top: 0;
+    z-index: -99;
+    opacity: 10%;
+    position: absolute;
+    background-image: url(../bahan/kiri.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 464px;
+    height: 600px;
+  }
+  .bg-lg2 {
+    opacity: 10%;
+    position: absolute;
+    background-image: url(../bahan/kanan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    right: 0;
+    width: 464px;
+    height: 600px;
+  }
+  .leader {
+    background-color: grey;
+  }
+  .officer {
+    background-color: grey;
+  }
+}
+@media screen and (max-width: 550px) {
+  .leader {
+    background-color: grey;
+  }
+  .officer {
+    background-color: grey;
+  }
+}
+
+/* RESPONSIVE KOTAK
+@media screen and (max-width: 850px) {
+  .kotak1 {
+    height: 140px;
+  }
+  .kotak2 {
+    height: 140px;
+  }
+  .kotak3 {
+    height: 140px;
+  }
+  .kotak4 {
+    height: 140px;
+  }
+  .kotak5 {
+    height: 140px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .kotak {
+    background-color: rgb(58, 58, 58);
+    margin: 5px;
+  }
+  .kotak1 {
+    height: 120px;
+  }
+  .kotak2 {
+    height: 120px;
+  }
+  .kotak3 {
+    height: 120px;
+  }
+  .kotak4 {
+    height: 120px;
+  }
+  .kotak5 {
+    height: 120px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .kotak {
+    background-color: rgb(58, 58, 58);
+    margin: 5px;
+  }
+  .kotak1 {
+    height: 100px;
+  }
+  .kotak2 {
+    height: 100px;
+  }
+  .kotak3 {
+    height: 100px;
+  }
+  .kotak4 {
+    height: 100px;
+  }
+  .kotak5 {
+    height: 100px;
+  }
+} */
