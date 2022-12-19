@@ -35,16 +35,16 @@
         <!-- navbar -->
         <nav id="home" :class="{'flex': open, 'hidden': !open}"
           class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-          <a class="px-4 py-2 mt-2 text-sm font-semibold text-white dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-sky-300"
+          <a class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold text-white dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-sky-300"
             href="#home">Home</a>
 
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
+          <a class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
             href="#About">About</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
+          <a class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
             href="#Contact">Contact</a>
           <div @click.away="open = false" class="relative" x-data="{ open: false }">
             <button @click="open = !open"
-              class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-sky-300">
+              class="lg:text-base flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-sky-300">
               <span>Production</span>
               <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
                 class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
@@ -199,9 +199,10 @@
       <div class="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold ">
         Telah hadir game setan season 2 lanjutan dari setan season1
       </div>
-      <a
-        class="sm:text-base md:text-xl border-spacing-4 md:p-2 p-1 font-bold border-grey-900 md:border-4 mr-10 mt-5 hover:bg-zinc-600 hover:border-white hover:text-white md:px-5 border-2 text-xs my-10">Try
-        It Now !</a>
+      <div
+        class="sm:text-base md:text-xl border-spacing-4 md:p-2 p-1 font-bold border-grey-900 md:border-4 mr-10 mt-5 hover:bg-zinc-600 hover:border-white hover:text-white md:px-5 border-2 text-xs my-10">
+        <a href="https://artworkhex.github.io/GameSetan/"> visit now</a>
+      </div>
     </div>
 
     <div class="text-xs md:text-2xl lg:text-3xl hidden lg:block pr-10">
