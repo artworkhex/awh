@@ -1,242 +1,338 @@
 <!DOCTYPE html>
 <html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWH Official</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="src/input.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="bahan/logoB.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      href="bahan/logoW.png"
+      media="(prefers-color-scheme: dark)"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="src/output.css" rel="stylesheet" />
-  <link href="src/input.css" rel="stylesheet" />
-  <link rel="icon" href="bahan/logoB.png" media="(prefers-color-scheme: light)" />
-  <link rel="icon" href="bahan/logoW.png" media="(prefers-color-scheme: dark)" />
-</head>
-
-<body class="bg-black text-white">
-  <header class="w-screen h-screen bg-no-repeat bg-center bg-cover">
-    <!-- component -->
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <div class="w-full text-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
-      <div x-data="{ open: false }"
-        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-        <div class="p-4 flex flex-row items-center justify-between">
-          <img class="h-[20px] lg:h-[25px]" src="bahan/LOGO1 1.png" alt="" />
-          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-              <path x-show="!open" fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                clip-rule="evenodd"></path>
-              <path x-show="open" fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </button>
-        </div>
-
-
-        <!-- navbar -->
-        <nav id="home" :class="{'flex': open, 'hidden': !open}"
-          class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-          <a class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold text-white dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-sky-300"
-            href="#home">Home</a>
-
-          <a class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
-            href="#About">About</a>
-          <a class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
-            href="#Contact">Contact</a>
-          <div @click.away="open = false" class="relative" x-data="{ open: false }">
-            <button @click="open = !open"
-              class="lg:text-base flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-sky-300">
-              <span>Production</span>
-              <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}"
-                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-                <path fill-rule="evenodd"
-                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
+  <body class="bg-black text-white">
+    <header class="w-screen h-screen bg-no-repeat bg-center bg-cover">
+      <!-- component -->
+      <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+        defer
+      ></script>
+      <div
+        class="w-full text-white dark-mode:text-gray-200 dark-mode:bg-gray-800"
+      >
+        <div
+          x-data="{ open: false }"
+          class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+        >
+          <div class="p-4 flex flex-row items-center justify-between">
+            <img class="h-[20px] lg:h-[25px]" src="bahan/LOGO1 1.png" alt="" />
+            <button
+              class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+              @click="open = !open"
+            >
+              <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path
+                  x-show="!open"
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  x-show="open"
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
               </svg>
             </button>
-            <div x-show="open" x-transition:enter="transition ease-out duration-100"
-              x-transition:enter-start="transform opacity-0 scale-95"
-              x-transition:enter-end="transform opacity-100 scale-100"
-              x-transition:leave="transition ease-in duration-75"
-              x-transition:leave-start="transform opacity-100 scale-100"
-              x-transition:leave-end="transform opacity-0 scale-95"
-              class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-              <div class="px-2 py-2 bg-neutral-700 rounded-md shadow dark-mode:bg-gray-800">
-                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                  href="artist/index.html">Artist</a>
-                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                  href="webdesain/index.html">Web Design</a>
-                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                  href="videography/index.html">Videography</a>
-                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                  href="achievement/index.html">Achievement</a>
-                <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                  href="manipulasi/index.html">Manipulation</a>
+          </div>
+
+          <!-- navbar -->
+          <nav
+            id="home"
+            :class="{'flex': open, 'hidden': !open}"
+            class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row"
+          >
+            <a
+              class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold text-white dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-sky-300"
+              href="#home"
+              >Home</a
+            >
+
+            <a
+              class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
+              href="#About"
+              >About</a
+            >
+            <a
+              class="lg:text-base px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-sky-300"
+              href="#Contact"
+              >Contact</a
+            >
+            <div
+              @click.away="open = false"
+              class="relative"
+              x-data="{ open: false }"
+            >
+              <button
+                @click="open = !open"
+                class="lg:text-base flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-sky-300"
+              >
+                <span>Production</span>
+                <svg
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  :class="{'rotate-180': open, 'rotate-0': !open}"
+                  class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                x-show="open"
+                x-transition:enter="transition ease-out duration-100"
+                x-transition:enter-start="transform opacity-0 scale-95"
+                x-transition:enter-end="transform opacity-100 scale-100"
+                x-transition:leave="transition ease-in duration-75"
+                x-transition:leave-start="transform opacity-100 scale-100"
+                x-transition:leave-end="transform opacity-0 scale-95"
+                class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+              >
+                <div
+                  class="px-2 py-2 bg-neutral-700 rounded-md shadow dark-mode:bg-gray-800"
+                >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="artist"
+                    >Artist</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="webdesain/index.html"
+                    >Web Design</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="videography/index.html"
+                    >Videography</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="achievement/index.html"
+                    >Achievement</a
+                  >
+                  <a
+                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="manipulasi/index.html"
+                    >Manipulation</a
+                  >
+                </div>
               </div>
             </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- title -->
+      <section
+        class="xm:mt-72 md1:mt-60 md1:text-center text-left md:text-center ml-3"
+      >
+        <h1 class="text-xl font-bold md:text-3xl md1:text-4xl">
+          COME JOIN US
+          <span class="text-blue-200 text-3xl md:text-4xl">
+            <br class="md1:hidden block" />
+            <a href="https://www.instagram.com/artworkhex_ofc/"
+              >ARTWORKHEX</a
+            ></span
+          >
+        </h1>
+        <h2 class="text-xs mb-[23%] md:text-2xl">
+          this website is about artworkhex
+        </h2>
+      </section>
+    </header>
+
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+    <!-- --------------------------------------------------------------------- -->
+
+    <!-- intro / leader /officer -->
+    <!-- intro / leader  -->
+    <div class="px-3 md:px-10 sm:px-5 md:mt-32">
+      <div class="block md:flex items-center">
+        <img
+          class="w-[200px] xm:w-[300px] sm:w-[600px] md:w-[270px] xl:w-[400px]"
+          src="bahan/leader1.png"
+          alt=""
+        />
+        <div class="md:pl-7">
+          <div
+            class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 mt-5 ml-3 md:ml-7"
+          >
+            Leader
           </div>
-        </nav>
+          <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
+            Leader and founder of startup artworkhex
+            <br />
+            <span class="hidden md:block"> holding frontend </span>
+            <br />
+            <span>
+              Perkenalkan nama saya Hafiz Alwan anda dapat memanggil saya Alwan.
+              Saya akan melakukannya sendiri jika saya menginginkannya. Hobi
+              saya mencari kesalahan dan memperbaikinya. Saya tinggal di kota
+              Satria, Jawa Tengah.
+            </span>
+            <br /><br />
+            <a class="text-blue-200" href="https://alwan9.github.io/personal/">
+              <span class=" "> Visit my</span> worksheet</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- intro / officer -->
+      <div class="block md:flex items-center mt-14 sm:mt-20 md:mt-32">
+        <div>
+          <div
+            class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 mt-5 ml-3 md:ml-7"
+          >
+            Officer
+          </div>
+          <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
+            As Instagram administrator and advisor
+            <br />
+            <span class="hidden md:block"> holding backend </span>
+            <br />
+            <span>
+              Introducing saya Alfat Taufik, biasa dipanggil Alfat. Saya anggota
+              baru Artworkhex pada 2022 saya lebih banyak berkecimpung di media
+              sosial serta pembicara di Artworkhex. Saya berasal dari Sumatera
+              namun sekarang saya berada di Purwokerto, Jawa Tengah.
+            </span>
+            <br /><br />
+            <a
+              class="text-blue-200"
+              href="https://alfattn.github.io/portofolio/"
+              ><span> Visit my </span>worksheet</a
+            >
+          </div>
+        </div>
+        <img
+          class="md:pl-7 mt-5 w-[200px] xm:w-[300px] sm:w-[600px] md:w-[270px] xl:w-[400px]"
+          src="bahan/officer.png"
+          alt=""
+        />
       </div>
     </div>
 
-
-    <!-- title -->
-    <div class="sm:mt-44 sm:text-center md:mt-56 mt-72 text-left md:text-center ml-3">
-      <h1 class="text-xl font-bold md:text-5xl">
-        COME JOIN US
-        <span class="text-blue-200">
-          <a href="https://www.instagram.com/artworkhex_ofc/">ARTWORKHEX</a></span>
-      </h1>
-      <h2 class="text-xs mb-[23%] md:text-2xl">
-        this website is about artworkhex
-      </h2>
-    </div>
-  </header>
-
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-  <!-- --------------------------------------------------------------------- -->
-
-  <!-- intro / leader /officer -->
-  <!-- intro / leader  -->
-  <div class="px-3 md:px-10 sm:px-5 md:mt-32">
-    <div class="block md:flex items-center">
-      <img class="w-[200px] xm:w-[300px] sm:w-[600px] md:w-[270px] xl:w-[400px]" src="bahan/leader.png" alt="" />
+    <!-- konten 1 / about -->
+    <div
+      class="px-3 md:px-10 sm:px-5 items-center block md:flex sm:mt-14 md:mt-24"
+    >
+      <img
+        class="w-[200px] xm:w-[300px] sm:w-[600px] md:w-[270px] md1:w-[350px] xl:w-[600px]"
+        src="bahan/image.png"
+        alt=""
+      />
       <div class="md:pl-7">
-        <div class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 mt-5 ml-3 md:ml-7">
-          Leader
+        <div>
+          <div
+            id="About"
+            class="text-2xl sm:text-3xl md:text-3xl md1:text-4xl font-bold mb-3 mt-5 ml-3 md:ml-7"
+          >
+            About AWH
+          </div>
         </div>
         <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
-          Leader and founder of startup artworkhex
-          <br />
-          <span class="hidden md:block"> holding frontend </span>
-          <br />
-          <span>
-            Perkenalkan nama saya Hafiz Alwan anda dapat memanggil saya Alwan.
-            Saya akan melakukannya sendiri jika saya menginginkannya. Hobi
-            saya mencari kesalahan dan memperbaikinya. Saya tinggal di kota
-            Satria, Jawa Tengah.
-          </span>
+          Sebuah startup yang dibuat pada tahun 2019 dan dibuat oleh alwan. Awal
+          pembuatan artworkhex hanya untuk kesenangan pribadi dan fokus dalam
+          karya seni. Saat ini artworkhex mencakup bidang, manipulasi,
+          fotography, videography, coding.
           <br /><br />
-          <a class="text-blue-200" href="https://alwan9.github.io/personal/">
-            <span class=" "> Visit my</span> worksheet</a>
+          Pada tahun 2022 artworkhex memiliki 3 akun media sosial aktif
+          diantaranya youtube, instagram, github. dipimpin oleh
+          <a href="https://www.instagram.com/zzls__/">@zzls__</a> and
+          <a href="https://www.instagram.com/alfattaufikn/">@alfattaufik</a>
         </div>
       </div>
     </div>
 
-    <!-- intro / officer -->
-    <div class="block md:flex items-center mt-14 sm:mt-20 md:mt-32">
-      <div>
-        <div class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 mt-5 ml-3 md:ml-7">
-          Officer
+    <!-- konten2 / news  -->
+    <div
+      class="mb-[20px] mt-20 block md:flex md:text-5xl bg-white text-black md:w-screen md:h-[500px] px-4 py-2 items-center"
+    >
+      <img class="md:h-[450px]" src="bahan/poster.png" alt="" />
+      <div class="text-left md:pl-10 mb-10">
+        <div class="text-base sm:text-2xl md:text-3xl font-bold">News!</div>
+        <div class="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold">
+          Telah hadir game setan season 2 lanjutan dari setan season1
         </div>
-        <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
-          As Instagram administrator and advisor
-          <br />
-          <span class="hidden md:block"> holding backend </span>
-          <br />
-          <span>
-            Introducing saya Alfat Taufik, biasa dipanggil Alfat. Saya anggota
-            baru Artworkhex pada 2022 saya lebih banyak berkecimpung di media
-            sosial serta pembicara di Artworkhex. Saya berasal dari Sumatera
-            namun sekarang saya berada di Purwokerto, Jawa Tengah.
-          </span>
-          <br /><br />
-          <a class="text-blue-200" href="https://alfattn.github.io/portofolio/"><span> Visit my </span>worksheet</a>
+        <div
+          class="sm:text-base md:text-xl border-spacing-4 md:p-2 p-1 font-bold border-grey-900 md:border-4 mr-10 mt-5 hover:bg-zinc-600 hover:border-white hover:text-white md:px-5 border-2 text-xs my-10"
+        >
+          <a href="https://artworkhex.github.io/GameSetan/">Try it now</a>
         </div>
       </div>
-      <img class="md:pl-7 mt-5 w-[200px] xm:w-[300px] sm:w-[600px] md:w-[270px] xl:w-[400px]" src="bahan/officer.png"
-        alt="" />
-    </div>
-  </div>
 
-
-  <!-- konten 1 / about -->
-  <div class="px-3 md:px-10 sm:px-5 items-center block md:flex sm:mt-14 md:mt-24">
-    <img class="w-[200px] xm:w-[300px] sm:w-[600px] md:w-[270px] md1:w-[350px] xl:w-[600px]" src="bahan/image.png"
-      alt="" />
-    <div class="md:pl-7">
-      <div>
-        <div id="About" class="text-2xl sm:text-3xl md:text-3xl md1:text-4xl font-bold mb-3 mt-5 ml-3 md:ml-7">
-          About AWH
-        </div>
-      </div>
-      <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
-        Sebuah startup yang dibuat pada tahun 2019 dan dibuat oleh alwan. Awal
-        pembuatan artworkhex hanya untuk kesenangan pribadi dan fokus dalam
-        karya seni. Saat ini artworkhex mencakup bidang, manipulasi,
-        fotography, videography, coding.
-        <br /><br />
-        Pada tahun 2022 artworkhex memiliki 3 akun media sosial aktif
-        diantaranya youtube, instagram, github. dipimpin oleh
-        <a href="https://www.instagram.com/zzls__/">@zzls__</a> and
-        <a href="https://www.instagram.com/alfattaufikn/">@alfattaufik</a>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- konten2 / news  -->
-  <div
-    class="mb-[20px] mt-20 block md:flex md:text-5xl bg-white text-black md:w-screen md:h-[500px] px-4 py-2 items-center">
-    <img class="md:h-[450px]" src="bahan/poster.png" alt="" />
-    <div class="text-left md:pl-10 mb-10">
-      <div class="text-base sm:text-2xl md:text-3xl font-bold">News!</div>
-      <div class="text-xs sm:text-xl md:text-2xl lg:text-5xl font-bold ">
-        Telah hadir game setan season 2 lanjutan dari setan season1
-      </div>
-      <div
-        class="sm:text-base md:text-xl border-spacing-4 md:p-2 p-1 font-bold border-grey-900 md:border-4 mr-10 mt-5 hover:bg-zinc-600 hover:border-white hover:text-white md:px-5 border-2 text-xs my-10">
-        <a href="https://artworkhex.github.io/GameSetan/"> visit now</a>
-      </div>
-    </div>
-
-    <div class="text-xs md:text-2xl lg:text-3xl hidden lg:block pr-10">
-      telah hadir sebuah game setan season 2 lanjutan dari game season 1
-      <br />
-      menceritakan sebuat anak anak kecil yang tersesat dihutan
-    </div>
-  </div>
-
-
-  <!-- konten 3 / logo -->
-  <div class="">
-    <img src="bahan/artworkhex4 1.png" alt="" />
-    <div class="px-3 md:px-10 sm:px-5">
-      <div class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 mt-5 ml-3 md:ml-7">
-        logo meaning
-      </div>
-      <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
-        AWH adalah singkatan dari artworkhex “A” yang berarti art/seni “W”
-        yang berarti work/karya dan “H” yang berarti hex/code warna
+      <div class="text-xs md:text-2xl lg:text-3xl hidden lg:block pr-10">
+        telah hadir sebuah game setan season 2 lanjutan dari game season 1
         <br />
-        memiliki arti karya seni yang menggunakan code warna.
+        menceritakan sebuat anak anak kecil yang tersesat dihutan
       </div>
     </div>
-  </div>
 
-
-  <!-- konten 4 / produksi -->
-  <div class="p-3 md:p-5">
-    <div class="ml-[70px] mb-[20px] text-2xl font-bold mt-20 md:text-4xl">
-      Production
+    <!-- konten 3 / logo -->
+    <div class="">
+      <img src="bahan/artworkhex4 1.png" alt="" />
+      <div class="px-3 md:px-10 sm:px-5">
+        <div
+          class="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 mt-5 ml-3 md:ml-7"
+        >
+          logo meaning
+        </div>
+        <div class="text-sm sm:text-base md:text-xl md1:text-2xl">
+          AWH adalah singkatan dari artworkhex “A” yang berarti art/seni “W”
+          yang berarti work/karya dan “H” yang berarti hex/code warna
+          <br />
+          memiliki arti karya seni yang menggunakan code warna.
+        </div>
+      </div>
     </div>
 
-    <!-- <div class="text-xs">
+    <!-- konten 4 / produksi -->
+    <div class="p-3 md:p-5">
+      <div class="ml-[70px] mb-[20px] text-2xl font-bold mt-20 md:text-4xl">
+        Production
+      </div>
+
+      <!-- <div class="text-xs">
       <div class="items-center grid text-center max-w-md mx-auto md:mx-0 justify-items-center grid-cols-3	gap-4 ">
         <a href="webdesain/index.html">
           <div class="bg-red-600 mx-1 w-[40px] xm:w-[50px] sm:w-[100px] md:w-[620px] lg:w-[320px] h-16
@@ -278,69 +374,98 @@
         </a>
       </div>
     </div> -->
-
-
-
-
-  </div>
-
-  <!-- konten 4 / produksi -->
-  <div class="p-3 md:p-5 ">
-    <div class="grid grid-cols-3 gap-4 text-center ">
-      <a href="webdesain/index.html">
-        <div class="satu bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60 "></div>
-      </a>
-      <a href="manipulasi/index.html">
-        <div class="dua bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"></div>
-      </a>
-      <a href="videography/index.html">
-        <div class="tiga bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"></div>
-      </a>
     </div>
 
-    <div class="grid grid-cols-2 gap-4 mt-5 text-center">
-      <a href="artist/index.html">
-        <div class="empat bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60 "></div>
-      </a>
-      <a href="achievement/index.html">
-        <div class="lima bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60 "></div>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- terakhir / footer -->
-  <footer id="Contact" class="mx-3 md:p-5 flex">
-    <div>
-      <img class="h-[50px] sm:h-[60px] md:h-[70px] mt-20 pt-[30px] md:" src="bahan/LOGO1 1.png" alt="" />
-      <div class="text-sm md:text-2xl">
-        Artist, Designer, Coding, Videography
+    <!-- konten 4 / produksi -->
+    <div class="p-3 md:p-5">
+      <div class="grid grid-cols-3 gap-4 text-center">
+        <a href="webdesain/index.html">
+          <div
+            class="satu bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"
+          ></div>
+        </a>
+        <a href="manipulasi/index.html">
+          <div
+            class="dua bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"
+          ></div>
+        </a>
+        <a href="videography/index.html">
+          <div
+            class="tiga bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"
+          ></div>
+        </a>
       </div>
-      <br />
-      <div class="text-xs sm:text-base md:text-2xl">Information</div>
-      <div class="text-xs sm:text-base md:text-2xl">
-        gunakan mode desktop atau ubah layar menjadi lanscape agar dapat
-        menikmati banyak fitur
+
+      <div class="grid grid-cols-2 gap-4 mt-5 text-center">
+        <a href="artist/index.html">
+          <div
+            class="empat bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"
+          ></div>
+        </a>
+        <a href="achievement/index.html">
+          <div
+            class="lima bg-gray-700 bg-no-repeat bg-cover bg-center h-20 sm:h-24 sm1:h-28 md:h-32 lg:h-60"
+          ></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- terakhir / footer -->
+    <footer id="Contact" class="mx-3 md:p-5 flex">
+      <div>
+        <img
+          class="h-[50px] sm:h-[60px] md:h-[70px] mt-20 pt-[30px] md:"
+          src="bahan/LOGO1 1.png"
+          alt=""
+        />
+        <div class="text-sm md:text-2xl">
+          Artist, Designer, Coding, Videography
+        </div>
         <br />
-        contact us if you need anything at
-        <a href="https://mail.google.com/mail/u/0/#sent?compose=new">
-          artworkhex@gmail.com</a>
+        <div class="text-xs sm:text-base md:text-2xl">Information</div>
+        <div class="text-xs sm:text-base md:text-2xl">
+          gunakan mode desktop atau ubah layar menjadi lanscape agar dapat
+          menikmati banyak fitur
+          <br />
+          contact us if you need anything at
+          <a href="https://mail.google.com/mail/u/0/#sent?compose=new">
+            artworkhex@gmail.com</a
+          >
+        </div>
+        <div class="flex items-center">
+          <a href="https://www.instagram.com/artworkhex_ofc/"
+            ><img
+              class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
+              src="bahan/medsos/1.png"
+              alt=""
+          /></a>
+          <a href="https://www.youtube.com/channel/UChSq1GJ6ikwdUflQk5LE9Aw"
+            ><img
+              class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
+              src="bahan/medsos/2.png"
+              alt=""
+          /></a>
+          <a href="eror/index.html"
+            ><img
+              class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
+              src="bahan/medsos/3.png"
+              alt=""
+          /></a>
+          <a href="https://github.com/alwan9/"
+            ><img
+              class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
+              src="bahan/medsos/4.png"
+              alt=""
+          /></a>
+          <a href="news/index.html"
+            ><img
+              class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
+              src="bahan/medsos/5.png"
+              alt=""
+          /></a>
+        </div>
       </div>
-      <div class="flex items-center">
-        <a href="https://www.instagram.com/artworkhex_ofc/"><img
-            class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10" src="bahan/medsos/1.png" alt="" /></a>
-        <a href="https://www.youtube.com/channel/UChSq1GJ6ikwdUflQk5LE9Aw"><img
-            class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10" src="bahan/medsos/2.png" alt="" /></a>
-        <a href="eror/index.html"><img class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
-            src="bahan/medsos/3.png" alt="" /></a>
-        <a href="https://github.com/alwan9/"><img class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
-            src="bahan/medsos/4.png" alt="" /></a>
-        <a href="news/index.html"><img class="w-[20px] sm:w-[30px] md:w-[36px] mr-2 md:mr-5 my-10"
-            src="bahan/medsos/5.png" alt="" /></a>
-      </div>
-    </div>
-  </footer>
-</body>
-<script src="src/script.js"></script>
-
+    </footer>
+  </body>
+  <script src="src/script.js"></script>
 </html>
