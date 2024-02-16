@@ -5,30 +5,140 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="src/output.css" rel="stylesheet">
+
     </head>
 
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
 
     <body class="bg-zinc-950 overflow-x-hidden text-zinc-50">
-        <!-- navabr -->
         <nav
-            class="fixed flex z-[999]   w-full py-3 bg-glass1 items-center px-7">
-            <!-- <img src alt> -->
-            <div class="text-5xl font-bold mr-5">
-                Logo
+            class="relative px-4 py-4 flex justify-between items-center z-[99] ">
+            <a class="text-3xl font-bold leading-none" href="#">
+                <img class="h-[25px] mr-5" src="/assets/logo.png" alt="awh">
+            </a>
+            <div class="lg:hidden">
+                <button
+                    class="navbar-burger flex items-center text-blue-600 p-3">
+                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path
+                            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
             </div>
-            <div class="flex items-center">
-                <a href="#home">
-                    <div class="mx-2">Home</div>
-                </a>
-                <a href="#about">
-                    <div class="mx-2">About</div>
-                </a>
-                <a href="#service">
-                    <div class="mx-2">service</div>
-                </a>
-            </div>
+            <ul
+                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                <li><a class="text-sm text-gray-400 hover:text-gray-500"
+                        href="#home">Home</a></li>
+                <li class="text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        stroke="currentColor" class="w-4 h-4 current-fill"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                </li>
+                <li><a class="text-sm text-blue-600 font-bold"
+                        href="#about">About
+                        Us</a></li>
+                <li class="text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        stroke="currentColor" class="w-4 h-4 current-fill"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                </li>
+                <li><a class="text-sm text-gray-400 hover:text-gray-500"
+                        href="#">Services</a></li>
+                <li class="text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        stroke="currentColor" class="w-4 h-4 current-fill"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                </li>
+                <li><a class="text-sm text-gray-400 hover:text-gray-500"
+                        href="#">Pricing</a></li>
+                <li class="text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                        stroke="currentColor" class="w-4 h-4 current-fill"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                </li>
+                <li><a class="text-sm text-gray-400 hover:text-gray-500"
+                        href="#">Contact</a></li>
+            </ul>
+
         </nav>
+        <div class="navbar-menu relative z-[999] hidden">
+            <div
+                class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+            <nav
+                class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                <div class="flex items-center mb-8">
+                    <a class="mr-auto text-3xl font-bold leading-none" href="#">
+                        <img class="h-[25px] mr-5" src="/assets/logo-b.png"
+                            alt="awh">
+                    </a>
+
+                </div>
+                <div>
+                    <ul>
+                        <li class="mb-1">
+                            <a
+                                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#home">Home</a>
+                        </li>
+                        <li class="mb-1">
+                            <a
+                                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#about">About Us</a>
+                        </li>
+                        <li class="mb-1">
+                            <a
+                                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#service">Services</a>
+                        </li>
+                        <li class="mb-1">
+                            <a
+                                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#story">Story</a>
+                        </li>
+                        <li class="mb-1">
+                            <a
+                                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="https://www.fiverr.com/alwan_zs?up_rollout=true">Order
+                                Now</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-auto">
+                    <a href></a>
+                    <a
+                        href="https://www.instagram.com/artworkhex_ofc?igsh=MWJqMWZsYndhbnMyYg==">
+                        <div
+                            class="hidden lg:inline-block py-2 px-6 bg-blue-500 hover:bg-blue-600 text-sm text-zinc-700 font-bold rounded-xl transition duration-200">
+                            Follow
+                            on instagram
+                        </div>
+                    </a>
+
+                    <p class="my-4 text-xs text-center text-gray-400">
+                        <span>Copyright © <script
+                                type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script></span>
+                    </p>
+                </div>
+            </nav>
+        </div>
 
         <section id="home">
             <header
@@ -37,7 +147,7 @@
                     <div
                         class="absolute  mt-[11%] w-[300px] lg1:w-[750px] z-[9] h-[400px]  rounded-r-[200px] bg-glass1">
                     </div>
-                    <img class="px-[10%] lg1:pl-[15%] relative z-[99]"
+                    <img class="px-[10%] lg1:pl-[15%] relative z-[9]"
                         src="assets/phone.png"
                         alt>
 
@@ -118,7 +228,7 @@
         </div>
 
         <div
-            class="lg1:grid grid-cols-2 px-[7%] lg1:px-[10%] items-center gap-[15%] mt-[10%]">
+            class="lg1:grid grid-cols-2 px-[7%] lg1:px-[10%] items-center gap-[15%] py-[25%] md1:py-[10%]">
             <!-- text -->
             <div>
                 <h1 class="text-5xl lg1:text-6xl font-bold">BY <br
@@ -140,15 +250,16 @@
             </div>
             <!-- img -->
             <div>
-                <img class="px-[5%] mt-16 md1:mt-0" src="/assets/profile.png"
+                <img class="px-[5%] mt-16 md1:mt-0" src="/assets/profiles.png"
                     alt>
             </div>
         </div>
 
         <div
-            class=" mt-[10%]   py-[7%] bg-zinc-900 lg1:flex gap-12 ">
+            class=" py-[25%] md1:py-[10%]    bg-zinc-900 lg1:flex gap-12 ">
 
-            <div class="lg1:w-[500px] pl-[5%] relative z-[99] mr-[10%]">
+            <div id="#service"
+                class="lg1:w-[500px] pl-[5%] relative z-[99] mr-[10%]">
                 <h1 class="text-6xl lg1:text-8xl font-bold">
                     The
                     <br>
@@ -164,6 +275,16 @@
                     years, progressing
                     from
                     my skills developed since the age of 10 until now.</p>
+                <a href="https://www.fiverr.com/alwan_zs?up_rollout=true">
+                    <button class="mt-7 flex items-center md1:text-2xl">
+                        <svg class="mr-4" xmlns="http://www.w3.org/2000/svg"
+                            width="1.3em"
+                            height="1.3em" viewBox="0 0 24 24"><path
+                                fill="currentColor"
+                                d="M15 7.808h4zm-10 0h9.046h-.834h.311zm.38-1H18.6l-1.33-1.596q-.097-.097-.222-.154Q16.923 5 16.788 5H7.192q-.134 0-.26.058q-.124.057-.22.154zM10 12.962l2-1l2 1V7.808h-4zM14.03 20H5.616q-.666 0-1.14-.475Q4 19.051 4 18.385V7.487q0-.283.093-.546q.094-.262.28-.48l1.558-1.87q.217-.286.543-.438Q6.8 4 7.176 4h9.61q.376 0 .709.153q.333.152.555.437l1.577 1.91q.186.225.28.491q.093.267.093.553v3.766q-.206-.06-.437-.083q-.23-.023-.448-.023H19V7.808h-4v5.152q-.279.192-.554.516t-.4.634L12 13.096l-3 1.5V7.808H5v10.577q0 .269.173.442t.442.173h7.908q.09.28.224.524q.134.243.284.476m4.565.596v-3h-3v-1h3v-3h1v3h3v1h-3v3z" /></svg>
+                        Order On Fivver
+                    </button>
+                </a>
             </div>
             <div style="  box-shadow: inset 10px 10px 100px rgba(0,0,0,0.9);
             "
@@ -201,13 +322,33 @@
             </div>
         </div>
 
+        <div
+            class=" mt-[3%] px-[14%] text-center py-[7%] bg-zinc-900 lg1:flex gap-12 ">
+            <div class="md1:mt-0 mt-[10%] lg1:mx-28">
+                <h2 class="text-5xl lg1:text-8xl font-bold">70+</h2>
+                <h1
+                    class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">produk</h1>
+            </div>
+            <div class="md1:mt-0 mt-[10%] lg1:mx-28">
+                <h2 class="text-5xl lg1:text-8xl font-bold">45+</h2>
+                <h1
+                    class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">Cutommer</h1>
+            </div>
+            <div class="md1:mt-0 mt-[10%] lg1:mx-28">
+                <h2 class="text-5xl lg1:text-8xl font-bold">55+</h2>
+                <h1
+                    class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">Orders</h1>
+            </div>
+        </div>
+
         <!-- konten history -->
-        <div class="text-center relative z-10 px-[7%] lg1:px-[10%] mt-[10%]">
+        <div
+            class="text-center relative z-10 px-[7%] lg1:px-[10%]  py-[15%] md1:py-[10%]">
             <!-- efek1 -->
             <img class="z-[-11] absolute right-0 "
                 src="/assets/efek/r1.png"
                 alt>
-            <h1 id="about" class="text-6xl lg1:text-8xl font-bold">
+            <h1 id="story" class="text-6xl lg1:text-8xl font-bold">
                 Hobby to <span class="gradasi1">Innovation</span>
             </h1>
             <br><br>
@@ -242,25 +383,16 @@
             <img class="w-[100%] px-36" src="/assets/ratting1.png" alt>
             <img class="w-[100%] px-36" src="/assets/ratting2.png" alt>
         </div>
-        <div class="flex px-[40%]">
-            <a href>
-                <button class="w-[100%] py-5 items-center flex">Open on
-                    Fivver <svg xmlns="http://www.w3.org/2000/svg" width="1em"
-                        height="1em" viewBox="0 0 24 24"><g
-                            transform="translate(24 0) scale(-1 1)"><g
-                                fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2"><path stroke-dasharray="20"
-                                    stroke-dashoffset="20"
-                                    d="M21 12H3.5"><animate fill="freeze"
-                                        attributeName="stroke-dashoffset"
-                                        dur="0.3s" values="20;0" /></path><path
-                                    stroke-dasharray="12" stroke-dashoffset="12"
-                                    d="M3 12L10 19M3 12L10 5"><animate
-                                        fill="freeze"
-                                        attributeName="stroke-dashoffset"
-                                        begin="0.3s" dur="0.2s"
-                                        values="12;0" /></path></g></g></svg></button>
+        <div class="flex px-[40%] mt-[11%]">
+            <a href="https://www.fiverr.com/alwan_zs?up_rollout=true">
+                <button class="mt-7 flex items-center md1:text-2xl">
+                    <svg class="mr-4" xmlns="http://www.w3.org/2000/svg"
+                        width="1.3em"
+                        height="1.3em" viewBox="0 0 24 24"><path
+                            fill="currentColor"
+                            d="M15 7.808h4zm-10 0h9.046h-.834h.311zm.38-1H18.6l-1.33-1.596q-.097-.097-.222-.154Q16.923 5 16.788 5H7.192q-.134 0-.26.058q-.124.057-.22.154zM10 12.962l2-1l2 1V7.808h-4zM14.03 20H5.616q-.666 0-1.14-.475Q4 19.051 4 18.385V7.487q0-.283.093-.546q.094-.262.28-.48l1.558-1.87q.217-.286.543-.438Q6.8 4 7.176 4h9.61q.376 0 .709.153q.333.152.555.437l1.577 1.91q.186.225.28.491q.093.267.093.553v3.766q-.206-.06-.437-.083q-.23-.023-.448-.023H19V7.808h-4v5.152q-.279.192-.554.516t-.4.634L12 13.096l-3 1.5V7.808H5v10.577q0 .269.173.442t.442.173h7.908q.09.28.224.524q.134.243.284.476m4.565.596v-3h-3v-1h3v-3h1v3h3v1h-3v3z" /></svg>
+                    Order On Fivver
+                </button>
             </a>
 
         </div>
