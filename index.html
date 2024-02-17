@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="src/output.css" rel="stylesheet">
-
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <title>AWH Official Website | By Alwan</title>
     </head>
 
     <!-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> -->
@@ -16,67 +17,49 @@
             <a class="text-3xl font-bold leading-none" href="#">
                 <img class="h-[25px] mr-5" src="assets/logo.png" alt="awh">
             </a>
-            <div class="lg:hidden">
-                <button
-                    class="navbar-burger flex items-center text-blue-600 p-3">
-                    <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <title>Mobile menu</title>
-                        <path
-                            d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-                    </svg>
-                </button>
+            <div class="flex items-center gap-8">
+                <ul class="md1:flex items-center gap-9 hidden mr-10 ">
+                    <a href="#home">
+                        <li
+                            class="hover:scale-105 hover:text-indigo-600	 duration-150">Home</li>
+                    </a>
+                    <a href="#about">
+                        <li
+                            class="hover:scale-105 hover:text-indigo-600	 duration-150">About</li>
+                    </a>
+                    <a href="#service">
+                        <li
+                            class="hover:scale-105 hover:text-indigo-600	 duration-150">Service</li>
+                    </a>
+                    <a href="#story">
+                        <li
+                            class="hover:scale-105 hover:text-indigo-600	 duration-150">Story</li>
+                    </a>
+                    <a href="#contact">
+                        <li
+                            class="hover:scale-105 hover:text-indigo-600	 duration-150">Contact</li>
+                    </a>
+                </ul>
+
+                <div class="lg:hidden">
+                    <div>
+                        <button class="relative group px-2 py-0 scale-75">
+                            <div
+                                class="navbar-burger relative flex items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all  ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 ">
+                                <div
+                                    class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+                                    <div
+                                        class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
+                                    <div class="bg-white h-[1px] rounded"></div>
+                                    <div
+                                        class="bg-white h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
             </div>
-            <ul
-                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-                <li><a class="text-sm text-gray-400 hover:text-gray-500"
-                        href="#home">Home</a></li>
-                <li class="text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        stroke="currentColor" class="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                    </svg>
-                </li>
-                <li><a class="text-sm text-blue-600 font-bold"
-                        href="#about">About
-                        Us</a></li>
-                <li class="text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        stroke="currentColor" class="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                    </svg>
-                </li>
-                <li><a class="text-sm text-gray-400 hover:text-gray-500"
-                        href="#">Services</a></li>
-                <li class="text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        stroke="currentColor" class="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                    </svg>
-                </li>
-                <li><a class="text-sm text-gray-400 hover:text-gray-500"
-                        href="#">Pricing</a></li>
-                <li class="text-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                        stroke="currentColor" class="w-4 h-4 current-fill"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                    </svg>
-                </li>
-                <li><a class="text-sm text-gray-400 hover:text-gray-500"
-                        href="#">Contact</a></li>
-            </ul>
 
         </nav>
         <div class="navbar-menu relative z-[999] hidden">
@@ -89,7 +72,6 @@
                         <img class="h-[25px] mr-5" src="assets/logo-b.png"
                             alt="awh">
                     </a>
-
                 </div>
                 <div>
                     <ul>
@@ -116,13 +98,18 @@
                         <li class="mb-1">
                             <a
                                 class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
+                                href="#contact">Contact</a>
+                        </li>
+                        <li class="mb-1">
+                            <a
+                                class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
                                 href="https://www.fiverr.com/alwan_zs?up_rollout=true">Order
                                 Now</a>
                         </li>
                     </ul>
                 </div>
                 <div class="mt-auto">
-                    <a href></a>
+
                     <a
                         href="https://www.instagram.com/artworkhex_ofc?igsh=MWJqMWZsYndhbnMyYg==">
                         <div
@@ -153,7 +140,9 @@
 
                 </div>
                 <!-- teks -->
-                <div
+                <!-- konten1 -->
+                <div data-aos="fade-up"
+                    data-aos-duration="1200"
                     class="pr-[10%] mt-11 relative z-[99] px-[7%] md1:px-[0px]">
                     <h2 class="text-5xl font-bold ">
                         Web Official
@@ -207,15 +196,23 @@
                 <div class="z-[-1] mt-[5%]">
                     <!-- efek1 -->
 
-                    <img class="absolute z-[1] left-0 top-0"
+                    <img data-aos="fade-up"
+                        data-aos-duration="1400"
+                        class="absolute z-[1] left-0 top-0"
                         src="assets/efek/l1.png"
                         alt>
-                    <img class="absolute z-[1]  right-0 top-0"
+                    <img data-aos="fade-up"
+                        data-aos-duration="1400"
+                        class="absolute z-[1]  right-0 top-0"
                         src="assets/efek/r2.png"
                         alt>
                     <!-- efek2 -->
-                    <img class="absolute right-0" src="assets/efekr1.png" alt>
-                    <img class="z-[-11] absolute top-0 right-0 "
+                    <img data-aos="fade-up"
+                        data-aos-duration="1400" class="absolute right-0"
+                        src="assets/efekr1.png" alt>
+                    <img data-aos="fade-up"
+                        data-aos-duration="1400"
+                        class="z-[-11] absolute top-0 right-0 "
                         src="assets/efek/r1.png"
                         alt>
                 </div>
@@ -227,7 +224,10 @@
             <img class="relative" src="assets/line.png" alt>
         </div>
 
-        <div
+        <!-- konten2 -->
+        <div data-aos="fade-up"
+            data-aos-duration="1200"
+            id="about"
             class="lg1:grid grid-cols-2 px-[7%] lg1:px-[10%] items-center gap-[15%] py-[25%] md1:py-[10%]">
             <!-- text -->
             <div>
@@ -255,10 +255,12 @@
             </div>
         </div>
 
-        <div
-            class=" py-[25%] md1:py-[10%]    bg-zinc-900 lg1:flex gap-12 ">
-
-            <div id="#service"
+        <!-- konten3 -->
+        <div data-aos="fade-up"
+            data-aos-duration="1200"
+            id="service"
+            class=" py-[25%] md1:py-[10%]  bg is-size-1  bg-zinc-900 lg1:flex gap-12 ">
+            <div
                 class="lg1:w-[500px] pl-[5%] relative z-[99] mr-[10%]">
                 <h1 class="text-6xl lg1:text-8xl font-bold">
                     The
@@ -325,30 +327,44 @@
         <div
             class=" mt-[3%] px-[14%] text-center py-[7%] bg-zinc-900 lg1:flex gap-12 ">
             <div class="md1:mt-0 mt-[10%] lg1:mx-28">
-                <h2 class="text-5xl lg1:text-8xl font-bold">70+</h2>
+
+                <h2
+                    class="text-5xl  lg1:text-8xl font-bold"><span
+                        class="scroll-counter"
+                        data-counter-time="1000">70</span>+</h2>
                 <h1
-                    class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">produk</h1>
+                    class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">Products</h1>
             </div>
             <div class="md1:mt-0 mt-[10%] lg1:mx-28">
-                <h2 class="text-5xl lg1:text-8xl font-bold">45+</h2>
+                <h2
+                    class="text-5xl  lg1:text-8xl font-bold"><span
+                        class="scroll-counter"
+                        data-counter-time="1000">46</span>+</h2>
                 <h1
                     class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">Cutommer</h1>
             </div>
             <div class="md1:mt-0 mt-[10%] lg1:mx-28">
-                <h2 class="text-5xl lg1:text-8xl font-bold">55+</h2>
+                <h2
+                    class="text-5xl  lg1:text-8xl font-bold"><span
+                        class="scroll-counter"
+                        data-counter-time="1000">55</span>+</h2>
                 <h1
                     class="text-2xl md1:text-4xl mt-5 font-light text-zinc-500">Orders</h1>
             </div>
         </div>
 
+        <!-- konten4 -->
         <!-- konten history -->
-        <div
-            class="text-center relative z-10 px-[7%] lg1:px-[10%]  py-[15%] md1:py-[10%]">
+        <div data-aos="fade-up"
+            data-aos-duration="1200"
+            id="story"
+            class="text-center bg is-size-1 relative z-10 px-[7%] lg1:px-[10%]  py-[15%] md1:py-[10%]">
             <!-- efek1 -->
-            <img class="z-[-11] absolute right-0 "
+            <img data-aos="fade-up"
+                data-aos-duration="1400" class="z-[-11] absolute right-0 "
                 src="assets/efek/r1.png"
                 alt>
-            <h1 id="story" class="text-6xl lg1:text-8xl font-bold">
+            <h1 class="text-6xl lg1:text-8xl font-bold">
                 Hobby to <span class="gradasi1">Innovation</span>
             </h1>
             <br><br>
@@ -375,15 +391,17 @@
                 journey with
                 ArtworkHex: From Hobby to Innovation.
             </p>
-            <img class="z-[-11] absolute top-[-80%] left-0"
+            <img data-aos="fade-up"
+                data-aos-duration="1400"
+                class="z-[-11] absolute top-[-80%] left-0"
                 src="assets/efek/l2.png" alt>
         </div>
 
-        <div class="grid grid-cols-2 relative z-[99] mt-16">
+        <div class="md1:grid hidden grid-cols-2 relative z-[99] mt-16">
             <img class="w-[100%] px-36" src="assets/ratting1.png" alt>
             <img class="w-[100%] px-36" src="assets/ratting2.png" alt>
         </div>
-        <div class="flex px-[40%] mt-[11%]">
+        <div class="lg1:flex hidden px-[40%] mt-[11%]">
             <a href="https://www.fiverr.com/alwan_zs?up_rollout=true">
                 <button class="mt-7 flex items-center md1:text-2xl">
                     <svg class="mr-4" xmlns="http://www.w3.org/2000/svg"
@@ -398,7 +416,7 @@
         </div>
 
         <!-- efek -->
-        <section id="service">
+        <section id="contact">
             <form
                 class="px-[4%] md1:px-[7%]  z-10 relative bg-zinc-800 border-t-[1px] border-zinc-700 mt-[20%] pb-[30%] lg1:pb-[20%] rounded-t-[1.5rem] lg1:rounded-t-[5rem] pt-[25%] lg1:pt-[10%]"
                 method="POST"
@@ -438,6 +456,12 @@
         </section>
 
         <script src="./src/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+          // JavaScript
+
+        </script>
     </body>
 
 </html>
